@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PoGo Raid Post Generator</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        
+        <link href="css/jquery.flexdatalist.min.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+
+        <div id="wrapper">
+            
+            <header>
+                <h1 style="margin: 20px 0">Pokemon Go</h1>
+            </header>
+            
+            
+            <div class="screen" id="screen_1" style="display: block">
+
+                <h2 style="margin: 8px 0">Raid-Post Generator:</h2>
+
+                <div id="raid_form">
+                    <form>
+
+                        <p><b>Raid:</b></p>
+                        <input class="list field flexdatalist" type="text" name="r" list="raids" data-min-length="0" placeholder="Raidboss auswählen" autocomplete="off"><br>
+                        <p><b>Arena:</b></p>
+                        <input class="list field flexdatalist" type="text" name="a" list="arenas" data-min-length="0" placeholder="Arena auswählen" autocomplete="off"><br>
+
+                        <p><b>Schlüpfzeit:</b></p>
+                        <input class="field" type="time" name="st"><br>
+                        oder Ende in <input class="field" type="number" name="end_in" min="0" max="90" style="width: 30px"> Minuten<br>
+                        <br>
+                        <input class="btn left" type="reset" value="Clear">
+                        <input class="btn left" type="submit" name="submit" value="Post">
+                        <button class="btn" onclick="generate()">Test1</button>
+                        <div class="clear"></div>
+                    </form>
+                </div>
+
+            </div>
+            
+            <div class="screen" id="screen_2" style="display: block">
+
+                <h2 style="margin: 8px 0">Post:</h2>
+                
+                <div class="post">
+                    <p> <a href="http://smooth-gaming.eu/pogoraid">smooth-gaming.eu/pogoraid</a><br>
+                        <br>
+                        <b>Arena</b><br>
+                        Startzeit<br>
+                        <br>
+                        Arena🏛 <br>
+                        <br>
+                        Standort📍 <a href="">Link</a><br>
+                        <br>
+                        Treff⏳: ?? Uhr <br>
+                        <br>
+                        Ende⌛: ?? Uhr <br>
+                        <br>
+                        👥<br>
+                    </p>
+
+                    <a class="btn_wa" href="">Whatsapp</a>
+
+                </div>
+                
+            </div>
+            
+            <div class="pre_footer">
+            
+                <button class="btn left">New Post</button>
+                <button class="btn" style="margin-top: 10px">Update</button>
+                <button class="btn" onclick="reset()">Test2</button>
+                
+            </div>
+
+        </div>
+        
+        
+        
+        <div id="footer">
+            <p class="info">powered by <a href="smooth-gaming.eu">smooth-gaming.eu</a></p>
+            <p class="pp">Es werden keinerlei Daten gespeichert.</p>
+        </div>
+        
+        
+        
+        <script src="js/jquery-3.3.1.min.js" type="application/javascript"></script>
+        <script src="js/jquery.flexdatalist.min.js" type="application/javascript"></script>
+        
+        <script>
+        $('.flexdatalist').flexdatalist({
+            minLength: 1
+        });
+            
+            function generate() {
+                document.getElementById('screen_1').style.display = 'none';
+                document.getElementById('screen_2').style.display = 'block';
+            }
+            
+            function reset() {
+                document.getElementById('screen_2').style.display = 'none';
+                document.getElementById('screen_1').style.display = 'block';
+            }
+            
+            window.addEventListener('load', async e => {
+                if('serviceWorker' in navigator){
+                    try {
+                        navigator.serviceWorker.register('sw.js');
+                        console.log('SW registered');
+                    } catch (error) {}
+                }
+            });
+            
+        </script>
+
+    </body>
+</html>

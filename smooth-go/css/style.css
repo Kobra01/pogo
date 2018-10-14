@@ -1,0 +1,205 @@
+/* CSS - style.css */
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Tahoma, Geneva, sans-serif;
+	background: black;
+}
+
+html {
+
+}
+
+
+body {
+	font-size: 100%;
+}
+
+h1 {
+	font-size: 1.875em;
+}
+
+div {
+	display: block;
+}
+
+#wrapper {
+	padding: 10px 5%;
+}
+
+.head {
+    border: 2px solid #f2f2f2;
+    border-radius: 8px;
+	padding: 8px;
+}
+
+.box {
+    display: block;
+    border: 2px solid #f2f2f2;
+    border-radius: 8px;
+    margin: 16px 0;
+	padding: 8px;
+}
+
+.box-item {
+    display: block;
+    border: 2px solid #f2f2f2;
+    border-radius: 8px;
+    margin: 16px 0;
+	padding: 8px;
+    min-height: 80px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.c-yellow {
+    color: #F2B90C;
+}
+
+.c-blue {
+    color: #2B448C;
+}
+
+.t-white {
+    color: #f2f2f2;
+}
+
+.no-box {
+    display: inline;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    float: left;
+}
+
+.show-img {
+    margin-right: 8px;
+}
+
+.box-header {
+    margin-bottom: 2px;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* --------- Navbar + Footer ---------------------- */
+
+ul.navbar {
+	clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+ul.navbar li {
+	float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}						
+
+ul.navbar li a:hover:not(.active) {
+	background: #546e7a;
+}
+
+a.footerlink {
+		text-align: center;
+		display: block;
+		width: 50%;
+		float: left;
+		text-decoration: none;
+		color: black;
+		margin: 8px 0;
+}
+
+/* ---------Responsive Design Part ---------------------- */
+
+/* --------- XS [Every Time] --------- */
+
+@media screen and (max-width: 600px){
+    ul.navbar li {
+    			float: none;
+    }
+
+    #wrapper {
+    	padding-left: 5%;
+    	padding-right: 5%;
+    }
+
+    .start-s, .start-m, .start-l, .start-xl {
+    	display: none;
+    }
+}
+
+/* --------- S --------- */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+	#wrapper {
+    	padding-left: 7%;
+    	padding-right: 7%;
+    }
+
+	.until-xs {
+		display: none;
+	}
+	.start-m, .start-l, .start-xl {
+    	display: none;
+    }	
+}
+
+/* --------- M --------- */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+	#wrapper {
+    	padding-left: 10%;
+    	padding-right: 10%;
+    }
+
+	.until-xs, .until-s {
+		display: none;
+	}
+	.start-l, .start-xl {
+    	display: none;
+    }	
+}
+
+/* --------- L --------- */
+@media screen and (min-width: 1201px) and (max-width: 1800px) {
+	#wrapper {
+    	padding-left: 15%;
+    	padding-right: 15%;
+    }
+
+	.until-xs, .until-s, .until-m {
+		display: none;
+	}
+	.start-xl {
+    	display: none;
+    }	
+}
+
+/* --------- XL --------- */
+@media screen and (min-width: 1800px){
+	#wrapper {
+    	padding-left: 20%;
+    	padding-right: 20%;
+    }
+
+	.until-xs, .until-s, .until-m, .until-l {
+		display: none;
+	}	
+}

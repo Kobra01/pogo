@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PoGo Raid Post Generator</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        
+        <link href="js/jquery.flexdatalist.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.flexdatalist.js"></script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <h1 style="margin: 20px 0">Pokemon Go</h1>
+
+            <h2 style="margin: 8px 0">Raid-Post Generator:</h2>
+            <a class="btn" href="index.html">Lite-Mode</a><br>
+            <div id="raid_gen">
+                <form action="cp.php">
+                    
+                    <p><b>Raid:</b></p>
+                    <input class="list field flexdatalist" type="text" name="r" list="raids" data-min-length="0" placeholder="Raidboss auswählen" autocomplete="off"><br>
+                    <p><b>Arena:</b></p>
+                    <input class="list field flexdatalist" type="text" name="a" list="arenas" data-min-length="0" placeholder="Arena auswählen" autocomplete="off"><br>
+                    
+                    <p><b>Schlüpfzeit:</b></p>
+                    <input class="field" type="time" name="st"><br>
+                    oder Ende in <input class="field" type="number" name="end_in" min="0" max="45" style="width: 30px"> Minuten<br>
+                    <br>
+                    <input class="btn left" type="reset" value="Clear">
+                    <input class="btn left" type="submit" name="submit" value="Post">
+                    <input class="btn left" type="submit" name="submit" value="Info">
+                    <div class="clear"></div>
+                </form>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p class="info">powered by <a href="smooth-gaming.eu">smooth-gaming.eu</a></p>
+            <p class="pp">Es werden keinerlei Daten gespeichert.</p>
+        </div>
+        
+        <div id="datalist">
+            <datalist id="raids">
+                <!--[if lte IE 9]><select data-datalist="raids"><![endif]-->
+                <option value="5er Ei *****">5er Ei *****</option>
+                <option value="4er Ei ****">4er Ei ****</option>
+                <option value="3er Ei ***">3er Ei ***</option>
+                <option value="2er Ei **">2er Ei **</option>
+                <option value="1er Ei *">1er Ei *</option>
+                <option value="Mewtu">Mewtu</option>
+                <option value="Geowaz">Geowaz</option>
+                <option value="Lapras">Lapras</option>
+                <option value="Relaxo">Relaxo</option>
+                <option value="Rizeros">Rizeros</option>
+                <option value="Simsala">Simsala</option>
+                <option value="Kicklee">Kicklee</option>
+                <option value="Nockchan">Nockchan</option>
+                <option value="Sichlor">Sichlor</option>
+                <option value="Machomei">Machomei</option>
+                <option value="Magmar">Magmar</option>
+                <option value="Magneton">Magneton</option>
+                <option value="Elektek">Elektek</option>
+                <option value="Schlurp">Schlurp</option>
+                <option value="Bisasam">Bisasam</option>
+                <option value="Dratini">Dratini</option>
+                <option value="Glumanda">Glumanda</option>
+                <option value="Schiggy">Schiggy</option>
+                <option value="Karpador">Karpador</option>
+                <!--[if lte IE 9]></select><![endif]-->
+            </datalist>
+            <datalist id="arenas">
+                <!--[if lte IE 9]><select data-datalist="arenas"><![endif]-->
+                <option value="Gate to Nowhere">Gate to Nowhere</option>
+                <option value="The Shepherd">The Shepherd</option>
+                <option value="Last Stop">Last Stop</option>
+                <option value="Delikat Coffee House">Delikat Coffee House</option>
+                <option value="Telefonsexy">Telefonsexy</option>
+                    
+                <option value="S-Bahnhof Neuenhagen">S-Bahnhof Neuenhagen</option>
+                <option value="Infotafel Neuenhagen">Infotafel Neuenhagen</option>
+                <option value="Special Cars Berlin">Special Cars Berlin</option>
+                <option value="Dampfwalze in Orange">Dampfwalze in Orange</option>
+                <option value="Dorfkirche Neuenhagen">Dorfkirche Neuenhagen</option>
+                    
+                <option value="Have a Break">Have a Break</option>
+                <option value="Todesaugen">Todesaugen</option>
+                <option value="S-Bahnhof Hoppegarten">S-Bahnhof Hoppegarten</option>
+                <option value="Grafitti Stromkasten">Grafitti Stromkasten</option>
+                <option value="Feuerwehr-Graffiti Lindenstraße">Feuerwehr-Graffiti Lindenstraße</option>
+                    
+                <option value="We All Die">We All Die</option>
+                <option value="Kopf am Tunnel">Kopf am Tunnel</option>
+                <option value="S-Bahnhof Birkenstein">S-Bahnhof Birkenstein</option>
+                <option value="Verheißungskirche Dahlwitz">Verheißungskirche Dahlwitz</option>
+                <option value="Kaiser-Pavillon">Kaiser-Pavillon</option>
+                    
+                <option value="Säule am Waldesrand">Säule am Waldesrand</option>
+                <option value="Orangener Baum">Orangener Baum</option>
+                <option value="Lila Kunst">Lila Kunst</option>
+                <option value="Dorfkirche, Fredersdorf">Dorfkirche, Fredersdorf</option>
+                <option value="Wappeneiche">Wappeneiche</option>
+                
+                <option value="Bahnhof Fredersdorf">Bahnhof Fredersdorf</option>
+                <option value="Denkmal In Fredersdorf">Denkmal In Fredersdorf</option>
+                <option value="Tankstellen Graffiti">Tankstellen Graffiti</option>
+                
+                    
+                <option value="Spielplatz der Avantgarde">Spielplatz der Avantgarde</option>
+                <option value="Neuenhagen Ententeich">Neuenhagen Ententeich</option>
+                <option value="Spielplatz am Friedensplatz">Spielplatz am Friedensplatz</option>
+                <option value="Galopprennbahn Hoppegarten">Galopprennbahn Hoppegarten</option>
+                <option value="Schloss Dahlwitz">Schloss Dahlwitz</option>
+                <option value="Spielplatz, Fredersdorf">Spielplatz, Fredersdorf</option>
+                <!--[if lte IE 9]></select><![endif]-->
+            </datalist>
+        </div>
+        
+        <script>
+        $('.flexdatalist').flexdatalist({
+            minLength: 1
+        });
+        </script>
+
+    </body>
+</html>

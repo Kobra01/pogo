@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PoGo Raid Post Generator</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <h1 style="margin: 20px 0">Pokemon Go</h1>
+
+            <h2 style="margin: 8px 0">Raid-Post Generator:</h2>
+            <a class="btn" href="index-adapt.html">Kompatibilitätsmodus (Apple)</a><br>
+            <div id="raid_gen">
+                <form action="cp.php">
+                    
+                    <p><b>Raid:</b></p>
+                    <input class="list field" name="r" list="raids" placeholder="Raidboss auswählen" autocomplete="off"><br>
+                    <p><b>Arena:</b></p>
+                    <input class="list field" name="a" list="arenas" placeholder="Arena auswählen" autocomplete="off"><br>
+                    
+                    <p><b>Schlüpfzeit:</b></p>
+                    <input class="field" type="time" name="st"><br>
+                    oder Ende in <input class="field" type="number" name="end_in" min="0" max="45" style="width: 30px"> Minuten<br>
+                    <br>
+                    <input class="btn left" type="reset" value="Clear">
+                    <input class="btn left" type="submit" name="submit" value="Post">
+                    <input class="btn left" type="submit" name="submit" value="Info">
+                    <div class="clear"></div>
+                </form>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p class="info">powered by <a href="smooth-gaming.eu">smooth-gaming.eu</a></p>
+            <p class="pp">Es werden keinerlei Daten gespeichert.</p>
+        </div>
+        
+        <div id="datalist">
+            <datalist id="raids">
+                <!--[if lte IE 9]><select data-datalist="raids"><![endif]-->
+                <option value="5er Ei *****">
+                <option value="4er Ei ****">
+                <option value="3er Ei ***">
+                <option value="2er Ei **">
+                <option value="1er Ei *">
+                <option value="Mewtu">
+                <option value="Geowaz">
+                <option value="Lapras">
+                <option value="Relaxo">
+                <option value="Rizeros">
+                <option value="Simsala">
+                <option value="Kicklee">
+                <option value="Nockchan">
+                <option value="Sichlor">
+                <option value="Machomei">
+                <option value="Magmar">
+                <option value="Magneton">
+                <option value="Elektek">
+                <option value="Schlurp">
+                <option value="Bisasam">
+                <option value="Dratini">
+                <option value="Glumanda">
+                <option value="Schiggy">
+                <option value="Karpador">
+                <!--[if lte IE 9]></select><![endif]-->
+            </datalist>
+            <datalist id="arenas">
+                <!--[if lte IE 9]><select data-datalist="arenas"><![endif]-->
+                <option value="Gate to Nowhere">
+                <option value="The Shepherd">
+                <option value="Last Stop">
+                <option value="Delikat Coffee House">
+                <option value="Telefonsexy">
+                    
+                <option value="S-Bahnhof Neuenhagen">
+                <option value="Infotafel Neuenhagen">
+                <option value="Special Cars Berlin">
+                <option value="Dampfwalze in Orange">
+                <option value="Dorfkirche Neuenhagen">
+                    
+                <option value="Have a Break">
+                <option value="Todesaugen">
+                <option value="S-Bahnhof Hoppegarten">
+                <option value="Grafitti Stromkasten">
+                <option value="Feuerwehr-Graffiti Lindenstraße">
+                    
+                <option value="We All Die">
+                <option value="Kopf am Tunnel">
+                <option value="S-Bahnhof Birkenstein">
+                <option value="Verheißungskirche Dahlwitz">
+                <option value="Kaiser-Pavillon">
+                    
+                <option value="Säule am Waldesrand">
+                <option value="Orangener Baum">
+                <option value="Lila Kunst">
+                <option value="Dorfkirche, Fredersdorf">
+                <option value="Wappeneiche">
+                
+                <option value="Bahnhof Fredersdorf">
+                <option value="Denkmal In Fredersdorf">
+                <option value="Tankstellen Graffiti">
+                
+                    
+                <option value="Spielplatz der Avantgarde">
+                <option value="Neuenhagen Ententeich">
+                <option value="Spielplatz am Friedensplatz">
+                <option value="Galopprennbahn Hoppegarten">
+                <option value="Schloss Dahlwitz">
+                <option value="Spielplatz, Fredersdorf">
+                <!--[if lte IE 9]></select><![endif]-->
+            </datalist>
+        </div>
+        
+
+    </body>
+</html>
